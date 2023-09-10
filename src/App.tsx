@@ -1,6 +1,6 @@
 import './index.css';
 import './gradient.css'
-import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import resume from "./assets/dinesh-tv-resume.pdf";
 
 function App(){
