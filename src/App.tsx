@@ -36,7 +36,7 @@ function App(){
       <div className='flex w-[20vw] min-w-[275px] max-w-[290x] cursor-default'>
         <h1 className='text-4xl dark:text-slate-300'>Hi, I'm <span className='name cursor-default font-semibold'> Dinesh </span> and I'm a Front-End Developer 🪄</h1>
       </div>
-      <div className='flex justify-between mt-5 w-[20vw] min-w-[275px] max-w-[1500px] px-8 mb-10'>
+      <div className='flex justify-between mt-5 w-[20vw] min-w-[275px] max-w-[300px] px-8 mb-10'>
         <svg className='hover:fill-[#61DBFB] transition-colors' viewBox="0 0 24 24" fill="grey" height="50px" width="50px">
           <path d="M13.785 11.245 A1.785 1.785 0 0 1 12 13.03 A1.785 1.785 0 0 1 10.215 11.245 A1.785 1.785 0 0 1 13.785 11.245 z" />
           <path d="M7.002 14.794l-.395-.101c-2.934-.741-4.617-2.001-4.617-3.452 0-1.452 1.684-2.711 4.617-3.452l.395-.1.111.391a19.507 19.507 0 001.136 2.983l.085.178-.085.178c-.46.963-.841 1.961-1.136 2.985l-.111.39zm-.577-6.095c-2.229.628-3.598 1.586-3.598 2.542 0 .954 1.368 1.913 3.598 2.54.273-.868.603-1.717.985-2.54a20.356 20.356 0 01-.985-2.542zm10.572 6.095l-.11-.392a19.628 19.628 0 00-1.137-2.984l-.085-.177.085-.179c.46-.961.839-1.96 1.137-2.984l.11-.39.395.1c2.935.741 4.617 2 4.617 3.453 0 1.452-1.683 2.711-4.617 3.452l-.395.101zm-.41-3.553c.4.866.733 1.718.987 2.54 2.23-.627 3.599-1.586 3.599-2.54 0-.956-1.368-1.913-3.599-2.542a20.683 20.683 0 01-.987 2.542z" />
@@ -55,7 +55,7 @@ function App(){
         <div>
           <span className='dark:text-slate-300 cursor-pointer'>Get in touch!</span>
         </div>
-        <div className='flex justify-evenly w-[20%] mt-3'>
+        <div className='flex justify-evenly w-[20%] max-w-[300px] mt-3'>
           <a href="https://github.com/thatcatfromspace" target='_blank'>
             <svg className=' hover:-translate-y-1 transition-transform ease-in-out' viewBox="0 0 1024 1024" fill="grey" height="25px" width="25px">
               <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
