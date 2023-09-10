@@ -1,6 +1,6 @@
 import './index.css';
 import './gradient.css'
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import resume from "./assets/dinesh-tv-resume.pdf";
 
 function App(){
@@ -14,7 +14,7 @@ function App(){
     <>
     <nav className='flex justify-between px-5 py-5 dark:text-slate-300'>
       <div>
-        <svg className='me-5 cursor-pointer rounded-full hover:opacity-70 mt-[2px]' fill={localStorage.getItem('theme' || null)  === 'light'? 'white': 'yellow'} viewBox="0 0 384 512" height="20px" width="20px" onClick={() => {
+        <svg className='me-5 cursor-pointer rounded-full hover:opacity-70 mt-[2px]' fill='yellow' viewBox="0 0 384 512" height="20px" width="20px" onClick={() => {
           if (localStorage.theme === "light" || !('theme' in localStorage)) {
             document.documentElement.classList.add('dark');
             localStorage.setItem('theme', 'dark');
@@ -28,15 +28,15 @@ function App(){
         </svg>
       </div>
       <div>
-      <a href={resume} target='_blank'> <span className='me-5 hover:underline cursor-pointer active:text-slate-300'> Resume</span> </a> 
-      <a href="mailto:dineshveluswamy@gmail.com"><span className='hover:underline cursor-pointer dark:active:text-slate-300' >Contact</span></a>
+        <a href={resume} target='_blank'> <span className='me-5 hover:underline cursor-pointer active:text-slate-300'> Resume</span> </a> 
+        <a href="mailto:dineshveluswamy@gmail.com"><span className='hover:underline cursor-pointer dark:active:text-slate-300' >Contact</span></a>
       </div>
     </nav>
     <div className='h-screen flex flex-col justify-center items-center'>
       <div className='flex w-[20vw] min-w-[275px] max-w-[290x] cursor-default'>
         <h1 className='text-4xl dark:text-slate-300'>Hi, I'm <span className='name cursor-default font-semibold'> Dinesh </span> and I'm a Front-End Developer 🪄</h1>
       </div>
-      <div className='flex justify-between mt-5 w-[20vw] min-w-[275px] max-w-[1500px] px-8'>
+      <div className='flex justify-between mt-5 w-[20vw] min-w-[275px] max-w-[1500px] px-8 mb-10'>
         <svg className='hover:fill-[#61DBFB] transition-colors' viewBox="0 0 24 24" fill="grey" height="50px" width="50px">
           <path d="M13.785 11.245 A1.785 1.785 0 0 1 12 13.03 A1.785 1.785 0 0 1 10.215 11.245 A1.785 1.785 0 0 1 13.785 11.245 z" />
           <path d="M7.002 14.794l-.395-.101c-2.934-.741-4.617-2.001-4.617-3.452 0-1.452 1.684-2.711 4.617-3.452l.395-.1.111.391a19.507 19.507 0 001.136 2.983l.085.178-.085.178c-.46.963-.841 1.961-1.136 2.985l-.111.39zm-.577-6.095c-2.229.628-3.598 1.586-3.598 2.542 0 .954 1.368 1.913 3.598 2.54.273-.868.603-1.717.985-2.54a20.356 20.356 0 01-.985-2.542zm10.572 6.095l-.11-.392a19.628 19.628 0 00-1.137-2.984l-.085-.177.085-.179c.46-.961.839-1.96 1.137-2.984l.11-.39.395.1c2.935.741 4.617 2 4.617 3.453 0 1.452-1.683 2.711-4.617 3.452l-.395.101zm-.41-3.553c.4.866.733 1.718.987 2.54 2.23-.627 3.599-1.586 3.599-2.54 0-.956-1.368-1.913-3.599-2.542a20.683 20.683 0 01-.987 2.542z" />
@@ -52,8 +52,25 @@ function App(){
         </svg>
       </div>
         <div className='h-[1px] w-32 my-5 bg-gray-500 '></div>
-        <div className='hover:-translate-y-2 transition-transform duration-300 ease-in-out'>
+        <div>
           <span className='dark:text-slate-300 cursor-pointer'>Get in touch!</span>
+        </div>
+        <div className='flex justify-evenly w-[20%] mt-3'>
+          <a href="https://github.com/thatcatfromspace" target='_blank'>
+            <svg className=' hover:-translate-y-1 transition-transform ease-in-out' viewBox="0 0 1024 1024" fill="grey" height="25px" width="25px">
+              <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0138.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/dineshveluswamy" target='_blank'>
+            <svg className=' hover:-translate-y-1 transition-transform ease-in-out' viewBox="0 0 1024 1024" fill="grey" height="25px" width="25px">
+              <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1168.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z" />
+            </svg>
+          </a>
+          <a href="https://last.fm/user/scaredyspacecat" target='_blank'>
+            <svg className='hover:-translate-y-1 transition-transform ease-in-out' viewBox="0 0 960 1000" fill="grey" height="25px" width="25px">
+              <path d="M480 20c132 0 245 46.667 339 140s141 206.667 141 340c0 132-47 245-141 339S612 980 480 980c-133.333 0-246.667-47-340-141S0 632 0 500c0-133.333 46.667-246.667 140-340S346.667 20 480 20m132 620c80 0 120-26.667 120-80 0-44-25.333-72-76-84l-38-8c-21.333-5.333-32-16.667-32-34 0-20 13.333-30 40-30 29.333 0 44.667 11.333 46 34l58-6c-4-49.333-37.333-74-100-74-68 0-102 28-102 84 0 40 22 65.333 66 76l40 8c26.667 6.667 40 18.667 40 36 0 21.333-20.667 32-62 32-50.667 0-84-24.667-100-74l-20-58c-12-38.667-27-65.667-45-81-18-15.333-46.333-23-85-23-36 0-67.667 13.333-95 40s-41 62-41 106c0 41.333 13 74.333 39 99s57 37 93 37 64.667-8.667 86-26l-18-50c-18.667 18.667-40.667 28-66 28-21.333 0-39.667-8.333-55-25-15.333-16.667-23-38.333-23-65 0-33.333 8.333-57.667 25-73 16.667-15.333 35.667-23 57-23 22.667 0 39 6 49 18s19 30.667 27 56l18 58c21.333 68 72.667 102 154 102" />
+            </svg>
+          </a>
         </div>
       </div>
     </>
