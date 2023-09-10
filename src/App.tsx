@@ -1,4 +1,5 @@
-import './App.css';
+import './index.css';
+import './gradient.css'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import resume from "./assets/dinesh-tv-resume.pdf";
 
@@ -32,8 +33,8 @@ function App(){
       </div>
     </nav>
     <div className='h-screen flex flex-col justify-center items-center'>
-      <div className='flex w-[20vw] min-w-[275px] max-w-[290x]'>
-        <h1 className='text-4xl dark:text-slate-300'>Hi, I'm <span className='bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent font-semibold'> Dinesh </span> and I'm a Front-End Developer</h1>
+      <div className='flex w-[20vw] min-w-[275px] max-w-[290x] cursor-default'>
+        <h1 className='text-4xl dark:text-slate-300'>Hi, I'm <span className='name cursor-default font-semibold'> Dinesh </span> and I'm a Front-End Developer 🪄</h1>
       </div>
       <div className='flex justify-between mt-5 w-[20vw] min-w-[275px] max-w-[1500px] px-8'>
         <svg className='hover:fill-[#61DBFB] transition-colors' viewBox="0 0 24 24" fill="grey" height="50px" width="50px">
@@ -50,7 +51,11 @@ function App(){
           <path d="M3 3h18v18H3V3m10.71 14.86c.5.98 1.51 1.73 3.09 1.73 1.6 0 2.8-.83 2.8-2.36 0-1.41-.81-2.04-2.25-2.66l-.42-.18c-.73-.31-1.04-.52-1.04-1.02 0-.41.31-.73.81-.73.48 0 .8.21 1.09.73l1.31-.87c-.55-.96-1.33-1.33-2.4-1.33-1.51 0-2.48.96-2.48 2.23 0 1.38.81 2.03 2.03 2.55l.42.18c.78.34 1.24.55 1.24 1.13 0 .48-.45.83-1.15.83-.83 0-1.31-.43-1.67-1.03l-1.38.8M13 11.25H8v1.5h1.5V20h1.75v-7.25H13v-1.5z" />
         </svg>
       </div>
-    </div>
+        <div className='h-[1px] w-32 my-5 bg-gray-500 '></div>
+        <div className='hover:-translate-y-2 transition-transform duration-300 ease-in-out'>
+          <span className='dark:text-slate-300 cursor-pointer font-semibold'>Get in touch!</span>
+        </div>
+      </div>
     </>
   );
 }
