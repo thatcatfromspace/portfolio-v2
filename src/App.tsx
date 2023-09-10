@@ -53,7 +53,7 @@ function App(){
       </div>
         <div className='h-[1px] w-32 my-5 bg-gray-500 '></div>
         <div className='hover:-translate-y-2 transition-transform duration-300 ease-in-out'>
-          <span className='dark:text-slate-300 cursor-pointer font-semibold'>Get in touch!</span>
+          <span className='dark:text-slate-300 cursor-pointer'>Get in touch!</span>
         </div>
       </div>
     </>
