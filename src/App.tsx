@@ -2,6 +2,7 @@ import './index.css';
 import './gradient.css';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import resume from "./assets/dinesh-tv-resume.pdf";
+import code from "./assets/code.txt"
 
 function App(){
   <Router basename='/porfolio'>
@@ -28,7 +29,8 @@ function App(){
         </svg>
       </div>
       <div>
-        <a href={resume} target='_blank'> <span className='me-5 hover:underline cursor-pointer active:text-slate-300'> Resume</span> </a> 
+        <a href={resume} target='_blank'> <span className='me-5 hover:underline cursor-pointer active:text-slate-300'> Resume</span> </a>
+        <a href={code} target='_blank'> <span className='me-5 hover:underline cursor-pointer active:text-slate-300'> Not resume </span> </a>  
         <a href="mailto:dineshveluswamy@gmail.com"><span className='hover:underline cursor-pointer dark:active:text-slate-300' >Contact</span></a>
       </div>
     </nav>
