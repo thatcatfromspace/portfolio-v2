@@ -2,13 +2,11 @@ import './index.css';
 import './gradient.css';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import resume from "./assets/dinesh-tv-resume.pdf";
-import Code from './Code';
 
 function App(){
   <Router basename='/porfolio'>
     <Routes>
       <Route path='/' element=""/>
-      <Route path='/code' element={<Code/>}/>
     </Routes>
   </Router>
 
