@@ -33,7 +33,7 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className={
                 word === "Dinesh"
-                  ? "dark:text-slate-300 name cursor-default font-semibold text-transparent bg-clip-text bg-gradient-to-br from-[ee7752] to-[#e73c7e] text-black opacity-0"
+                  ? "dark:text-[#e73c7e] cursor-default font-semibold text-black opacity-0"
                   : "dark:text-slate-300 text-black opacity-0"
               }
             >

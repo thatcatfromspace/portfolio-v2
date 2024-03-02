@@ -63,7 +63,7 @@ function App() {
           {/*  and I'm a Full-Stack Developer 🪄*/}
           {/*</h1>*/}
           <TextGenerateEffect
-            words={"Hi, I'm Dinesh and I'm a full-stack developer."}
+            words={"Hi, I'm Dinesh and I'm a full-stack developer 🪄"}
           />
         </div>
         <div className="flex justify-between mt-5 w-[20vw] min-w-[275px] max-w-[300px] px-8 mb-10">
