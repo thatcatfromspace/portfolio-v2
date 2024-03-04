@@ -19,7 +19,7 @@ export const TextGenerateEffect = ({
       },
       {
         duration: 2,
-        delay: stagger(0.35),
+        delay: stagger(0.3),
       },
     );
   }, [scope.current]);
@@ -33,7 +33,7 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className={
                 word === "Dinesh"
-                  ? "dark:text-[#e73c7e] cursor-default font-semibold text-black opacity-0"
+                  ? "dark:text-[#23a6d5] cursor-default font-semibold text-black opacity-0"
                   : "dark:text-slate-300 text-black opacity-0"
               }
             >
@@ -47,7 +47,7 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-normal", className)}>
-      <div className="mt-4">
+      <div>
         <div className=" dark:text-slate-300 text-black text-4xl leading-snug tracking-wide font-sans">
           {renderWords()}
         </div>

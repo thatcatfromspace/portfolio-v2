@@ -1,7 +1,7 @@
 import "./index.css";
 import "./gradient.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TextGenerateEffect } from "../components/ui/text-generate-effect";
 import resume from "./assets/dinesh-tv-resume.pdf";
 
@@ -13,6 +13,7 @@ function App() {
   </Router>;
 
   const [noDarkMode, setDarkMode] = useState(true);
+  const [showGradient, setShowGradient] = useState(false);
 
   const darkModeFunction = () => {
     {
@@ -25,6 +26,12 @@ function App() {
       }
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowGradient(true);
+    }, 4000);
+  }, []);
   return (
     <>
       <nav className="flex justify-between px-5 py-5 dark:text-slate-300">
@@ -56,15 +63,20 @@ function App() {
         </div>
       </nav>
       <div className="h-screen flex flex-col justify-center items-center">
-        <div className="flex w-[25vw] min-w-[275px] max-w-[350px] cursor-default">
-          {/*<h1 className="text-4xl dark:text-slate-300">*/}
-          {/*  Hi, I'm{" "}*/}
-          {/*  <span className="name cursor-default font-semibold"> Dinesh </span>{" "}*/}
-          {/*  and I'm a Full-Stack Developer 🪄*/}
-          {/*</h1>*/}
-          <TextGenerateEffect
-            words={"Hi, I'm Dinesh and I'm a full-stack developer 🪄"}
-          />
+        <div className="flex w-[350px] cursor-default">
+          {showGradient ? (
+            <h1 className="text-4xl dark:text-slate-300 leading-snug tracking-wide font-sans">
+              Hi, I'm{" "}
+              <span className="name leading-snug tracking-wide font-semibold font-sans">
+                Dinesh{" "}
+              </span>
+              and I'm a Full-Stack Developer 🪄
+            </h1>
+          ) : (
+            <TextGenerateEffect
+              words={"Hi, I'm Dinesh and I'm a Full-Stack Developer 🪄"}
+            />
+          )}
         </div>
         <div className="flex justify-between mt-5 w-[20vw] min-w-[275px] max-w-[300px] px-8 mb-10">
           <svg
