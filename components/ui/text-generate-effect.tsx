@@ -33,7 +33,7 @@ export const TextGenerateEffect = ({
               key={word + idx}
               className={
                 word === "Dinesh"
-                  ? "dark:text-[#23a6d5] cursor-default font-semibold text-black opacity-0"
+                  ? "dark:text-[#23a6d5] cursor-default font-bold text-black opacity-0"
                   : "dark:text-slate-300 text-black opacity-0"
               }
             >
@@ -48,7 +48,7 @@ export const TextGenerateEffect = ({
   return (
     <div className={cn("font-normal", className)}>
       <div>
-        <div className=" dark:text-slate-300 text-black text-4xl leading-snug tracking-wide font-sans">
+        <div className=" dark:text-slate-300 text-black text-3xl leading-snug tracking-wide font-heading font-semibold">
           {renderWords()}
         </div>
       </div>

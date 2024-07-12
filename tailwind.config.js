@@ -16,7 +16,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: "'DM Sans'",
+        sans: "Inter",
+        heading: "Plus Jakarta Sans"
       },
     },
   },
