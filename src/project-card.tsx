@@ -14,7 +14,7 @@ export const ProjectCard = ({
   return (
     <div className="w-full cursor-pointer flex-col rounded-lg p-4 shadow-lg dark:text-slate-300">
       <div className="group flex items-center justify-start">
-        <a href={projectLink}>
+        <a href={projectLink} target="_blank">
           <h3 className="text-lg font-semibold">{projectName}</h3>
         </a>
         {projectLink ? (
