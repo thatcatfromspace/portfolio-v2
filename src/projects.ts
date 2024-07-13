@@ -23,4 +23,12 @@ export const projects: Array<{
     ],
     link: "https://proleap.vercel.app",
   },
+  {
+    name: "BloomSync",
+    desc: "Directory content synchronizer using bloom filters.",
+    frameworks: [
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
+    ],
+    link: "https://github.com/thatcatfromspace/bloomsync",
+  },
 ];

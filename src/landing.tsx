@@ -44,7 +44,9 @@ export const Landing = () => {
       <div className="bg-background h-[100%] min-h-[100vh] scroll-smooth">
         <nav className="sticky flex justify-between p-5 dark:text-slate-300 sm:justify-between md:px-28 lg:px-48">
           <div className="font-heading flex items-center gap-x-3 text-lg font-bold">
-            <img src={oddish} alt="avatar" height={30} width={30} />
+            <a href="https://pokemondb.net/pokedex/oddish" target="_blank">
+              <img src={oddish} alt="avatar" height={30} width={30} />
+            </a>
             <p>Dinesh Veluswamy</p>
           </div>
           <div className="flex items-center gap-x-10 font-semibold text-neutral-400">
