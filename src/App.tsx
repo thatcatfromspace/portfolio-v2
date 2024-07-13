@@ -8,6 +8,7 @@ import moon from "./assets/moon.png";
 import oddish from "./assets/oddish.png";
 import resume from "./assets/dinesh-tv-resume.pdf";
 import { motion, useAnimate } from "framer-motion";
+import { projects } from "./projects.ts";
 
 import {
   Sheet,
@@ -130,12 +131,13 @@ function App() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            <div className="flex justify-center">
+            {projects.map((project, index) => (
               <ProjectCard
-                projectName="Mozart"
-                projectDesc="sdvibfbwbwitbgiwbt"
+                projectName={project.name}
+                projectDesc={project.desc}
+                projectFrameworks={project.frameworks}
               />
-            </div>
+            ))}
             <div className="flex justify-center">hello</div>
             <div className="flex justify-center">hola</div>
           </motion.div>
