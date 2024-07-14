@@ -75,12 +75,15 @@ export const Landing = () => {
               </SheetTrigger>
               <SheetContent className="flex w-[300px] flex-col font-semibold text-black dark:text-slate-300 sm:w-[440px]">
                 <SheetTitle className="invisible">Mobile Navbar</SheetTitle>
-                <a href={resume} target="_blank">
+                <a href={resume} target="_blank" aria-label="Resume">
                   <span className="cursor-pointer hover:underline active:text-slate-300 sm:flex">
                     Resume
                   </span>
                 </a>
-                <a href="mailto:dineshveluswamy@gmail.com">
+                <a
+                  href="mailto:dineshveluswamy@gmail.com"
+                  aria-label="email id"
+                >
                   <span className="cursor-pointer hover:underline dark:active:text-slate-300 sm:flex">
                     Contact
                   </span>
