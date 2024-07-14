@@ -8,6 +8,7 @@ import oddish from "./assets/oddish.png";
 import resume from "./assets/dinesh-tv-resume.pdf";
 import { motion } from "framer-motion";
 import { projects } from "./projects.ts";
+import { platforms } from "./platforms.ts";
 import {
   Sheet,
   SheetContent,
@@ -41,9 +42,9 @@ export const Landing = () => {
 
   return (
     <>
-      <div className="bg-background h-[100%] min-h-[100vh] scroll-smooth">
+      <div className="h-[100%] min-h-[100vh] scroll-smooth bg-background">
         <nav className="sticky flex justify-between p-5 dark:text-slate-300 sm:justify-between md:px-28 lg:px-48">
-          <div className="font-heading flex items-center gap-x-3 text-lg font-bold">
+          <div className="flex items-center gap-x-3 font-heading text-lg font-bold">
             <a href="https://pokemondb.net/pokedex/oddish" target="_blank">
               <img src={oddish} alt="avatar" height={30} width={30} />
             </a>
@@ -105,17 +106,29 @@ export const Landing = () => {
             <p className="text-lg dark:text-slate-300 sm:w-2/5">
               I'm a software developer specializing in building responsive,
               performant and elegant websites. I'm currently working on creating
-              business oriented websites with JavaScript. I also occassionally
+              business oriented websites with JavaScript. I also occasionally
               teach.
             </p>
           </div>
+          <div className="mt-5 flex items-center gap-x-6 transition-all sm:gap-x-3">
+            {platforms.map((platform) => (
+              <a href={platform.platformLink} target="_blank">
+                <img
+                  src={platform.imageLink}
+                  alt={platform.platform}
+                  height={platform.platform === "twitter" ? 15 : 20}
+                  width={platform.platform === "twitter" ? 15 : 20}
+                />
+              </a>
+            ))}
+          </div>
         </div>
-        <div className="mt-10 px-6 lg:px-32">
-          <h2 className="font-heading text-muted-foreground text-3xl font-semibold">
+        <div className="mt-10 px-6 sm:mt-5 lg:px-32">
+          <h2 className="font-heading text-3xl font-semibold text-muted-foreground">
             My Projects
           </h2>
         </div>
-        <div className="mt-12">
+        <div className="mt-5">
           <motion.div
             className="grid grid-cols-1 justify-center gap-4 px-6 dark:text-slate-300 md:grid-cols-3 lg:px-32"
             animate={{ translateY: -10 }}
