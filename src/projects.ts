@@ -8,7 +8,7 @@ export const projects: Array<{
     name: "Mozart",
     desc: "Track your music listening history with ease!",
     frameworks: [
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/nextjs.svg",
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/nestjs.svg",
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg",
     ],
