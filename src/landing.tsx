@@ -106,25 +106,29 @@ export const Landing = () => {
             )}
           </div>
           <div className="mt-4 flex">
-            <p className="text-lg dark:text-slate-300 sm:w-2/5">
+            <p className="text-lg dark:text-slate-300 sm:w-3/5">
               I'm a software developer specializing in building responsive,
               performant and elegant websites. I'm currently working on creating
-              business oriented websites with JavaScript. I also occasionally
-              teach.
+              websites with different JavaScript frameworks. I'm also an open source contributor.
             </p>
           </div>
-          <div className="mt-5 flex items-center gap-x-6 transition-all sm:gap-x-3">
+          <motion.div
+            className="mt-5 flex items-center gap-x-6 transition-all sm:gap-x-3"
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             {platforms.map((platform) => (
-              <a href={platform.platformLink} target="_blank">
+              <motion.a href={platform.platformLink} target="_blank">
                 <img
                   src={platform.imageLink}
                   alt={platform.platform}
                   height={platform.platform === "twitter" ? 15 : 20}
                   width={platform.platform === "twitter" ? 15 : 20}
                 />
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </motion.div>
         </div>
         <div className="mt-10 px-6 sm:mt-5 lg:px-32">
           <h2 className="font-heading text-3xl font-semibold text-muted-foreground">
