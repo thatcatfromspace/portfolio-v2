@@ -42,7 +42,7 @@ export const Landing = () => {
 
   return (
     <>
-      <div className="h-[100%] min-h-[100vh] scroll-smooth bg-background">
+      <div className="h-[100%] min-h-[100vh] scroll-smooth bg-background font-sans">
         <nav className="sticky flex justify-between p-5 dark:text-slate-300 sm:justify-between md:px-28 lg:px-48">
           <div className="flex items-center gap-x-3 font-heading text-lg font-bold">
             <a href="https://pokemondb.net/pokedex/oddish" target="_blank">
@@ -109,7 +109,8 @@ export const Landing = () => {
             <p className="text-lg dark:text-slate-300 sm:w-3/5">
               I'm a software developer specializing in building responsive,
               performant and elegant websites. I'm currently working on creating
-              websites with different JavaScript frameworks. I'm also an open source contributor.
+              websites with different JavaScript frameworks. I'm also an open
+              source contributor.
             </p>
           </div>
           <motion.div
