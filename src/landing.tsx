@@ -108,8 +108,7 @@ export const Landing = () => {
           <div className="mt-4 flex">
             <p className="text-lg dark:text-slate-300 sm:w-3/5">
               I'm a software developer specializing in building responsive,
-              performant and elegant websites. I'm currently working on creating
-              websites with different JavaScript frameworks. I'm also an open
+              performant and elegant websites. I'm currently exploring different JavaScript frameworks and advanced C++. I'm also an open
               source contributor.
             </p>
           </div>
