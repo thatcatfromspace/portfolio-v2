@@ -25,7 +25,7 @@ export const projects: Array<{
   },
   {
     name: "BloomSync",
-    desc: "Directory content synchronizer using bloom filters.",
+    desc: "Elegantly synchronizes folders using bloom filters.",
     frameworks: [
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
     ],
