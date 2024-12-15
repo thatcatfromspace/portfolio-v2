@@ -19,6 +19,6 @@ export const platforms: Array<{
     platform: "twitter",
     imageLink:
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/x.svg",
-    platformLink: "https://x.com/DVeluswamy50277",
+    platformLink: "https://x.com/kittensonketo",
   },
 ];
