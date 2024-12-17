@@ -12,6 +12,7 @@ export const projects: Array<{
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/nestjs.svg",
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg",
     ],
+    link: "https://mozart-tracker.vercel.app"
   },
   {
     name: "ProLeap",
