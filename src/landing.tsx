@@ -9,6 +9,7 @@ import resume from "./assets/dinesh-tv-resume.pdf";
 import { motion } from "framer-motion";
 import { projects } from "./projects.ts";
 import { platforms } from "./platforms.ts";
+import { TextLoop } from "react-text-loop-ts";
 import {
   Sheet,
   SheetContent,
@@ -98,18 +99,19 @@ export const Landing = () => {
               <h1 className="font-heading text-4xl font-semibold leading-snug tracking-wide dark:text-slate-300">
                 Hey, I'm&nbsp;
                 <span className="name font-heading font-bold leading-snug tracking-wide">
-                  Dinesh.
+                  Dinesh&nbsp;
                 </span>
+                and I'm a&nbsp; <TextLoop texts={["Software Engineer.", "Full Stack Developer.", "Web3 Enthusiast.", "Team Leader.", "Systems Designer."]} interval={4000} />
               </h1>
             ) : (
-              <TextGenerateEffect words={"Hey, I'm Dinesh."} />
+              <TextGenerateEffect words={"Hey, I'm Dinesh, and I'm a Web Developer."} />
             )}
           </div>
           <div className="mt-4 flex">
             <p className="text-lg dark:text-slate-300 sm:w-3/5">
               I'm a software developer specializing in building responsive,
               performant and elegant websites. I'm currently exploring different JavaScript frameworks and advanced C++. I'm also an open
-              source contributor.
+              source contributor. 
             </p>
           </div>
           <motion.div
