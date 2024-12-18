@@ -32,7 +32,7 @@ export const TextGenerateEffect = ({
             <motion.span
               key={word + idx}
               className={
-                word === "Dinesh."
+                word === "Dinesh"
                   ? "dark:text-[#23a6d5] cursor-default font-bold text-black opacity-0"
                   : "dark:text-slate-300 text-black opacity-0"
               }
