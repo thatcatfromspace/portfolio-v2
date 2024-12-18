@@ -101,7 +101,7 @@ export const Landing = () => {
                 <span className="name font-heading font-bold leading-snug tracking-wide">
                   Dinesh&nbsp;
                 </span>
-                and I'm a&nbsp; <TextLoop texts={["Software Engineer.", "Full Stack Developer.", "Web3 Enthusiast.", "Team Leader.", "Systems Designer., Linux Enthusiast"]} interval={3000} />
+                and I'm a&nbsp; <TextLoop texts={["Software Engineer.", "Full Stack Developer.", "Web3 Enthusiast.", "Team Leader.", "Systems Designer., Linux Enthusiast."]} interval={3000} />
               </h1>
             ) : (
               <TextGenerateEffect words={"Hey, I'm Dinesh and I'm a Web Developer."} />
