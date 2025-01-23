@@ -5,16 +5,6 @@ export const projects: Array<{
   link?: string;
 }> = [
   {
-    name: "Mozart",
-    desc: "Track your music listening history with ease!",
-    frameworks: [
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/nestjs.svg",
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg",
-    ],
-    link: "https://mozart-tracker.vercel.app"
-  },
-  {
     name: "ProLeap",
     desc: "Comprehensive app to manage mentor sessions.",
     frameworks: [
@@ -32,4 +22,22 @@ export const projects: Array<{
     ],
     link: "https://github.com/thatcatfromspace/bloomsync",
   },
+  {
+    name: "ForeSight",
+    desc: "Big data weather analytics for weather forecasting.",
+    frameworks: [
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
+      "https://github.com/thatcatfromspace/portfolio-v2/blob/main/src/assets/cassandra.svg",
+    ]
+  },
+  {
+    name: "Mozart",
+    desc: "Track your music listening history with ease!",
+    frameworks: [
+      "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/nestjs.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg",
+    ],
+    link: "https://mozart-tracker.vercel.app"
+  }
 ];
