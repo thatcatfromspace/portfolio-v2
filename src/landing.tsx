@@ -101,7 +101,7 @@ export const Landing = () => {
                 <span className="name font-heading font-bold leading-snug tracking-wide">
                   Dinesh&nbsp;
                 </span>
-                and I'm a&nbsp; <TextLoop texts={["Software Engineer.", "Full Stack Developer.", "Web3 Enthusiast.", "Team Leader.", "Systems Designer.", "Linux Enthusiast."]} interval={3000} />
+                and I'm a&nbsp; <TextLoop texts={["Software Engineer.", "Full Stack Developer.", "LLM Enthusiast.", "Team Leader.", "Systems Designer.", "Distrohopper."]} interval={3000} />
               </h1>
             ) : (
               <TextGenerateEffect words={"Hey, I'm Dinesh and I'm a Web Developer."} />
@@ -137,9 +137,9 @@ export const Landing = () => {
             My Projects
           </h2>
         </div>
-        <div className="mt-5">
+        <div className="mt-5 pb-10">
           <motion.div
-            className="grid grid-cols-1 justify-center gap-4 px-6 dark:text-slate-300 md:grid-cols-3 lg:px-32"
+            className="grid grid-cols-1 justify-center gap-x-4 gap-y-8 px-6 dark:text-slate-300 md:grid-cols-3 lg:px-32"
             animate={{ translateY: -10 }}
             initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1 }}

@@ -15,12 +15,14 @@ export const projects: Array<{
     link: "https://proleap.vercel.app",
   },
   {
-    name: "BloomSync",
-    desc: "Elegantly synchronizes folders using bloom filters.",
+    name: "ChatPDF",
+    desc: "Summarize and converse about your PDFs with a chatbot.",
     frameworks: [
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/react.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/fastapi.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/langchain.svg",
     ],
-    link: "https://github.com/thatcatfromspace/bloomsync",
+    link: "https://ai-planet-chatbot.vercel.app"
   },
   {
     name: "ForeSight",
@@ -28,7 +30,16 @@ export const projects: Array<{
     frameworks: [
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/cassandra.svg",
-    ]
+    ],
+    link: "https://github.com/thatcatfromspace/foresight"
+  },
+  {
+    name: "BloomSync",
+    desc: "Elegantly synchronizes folders using bloom filters.",
+    frameworks: [
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
+    ],
+    link: "https://github.com/thatcatfromspace/bloomsync",
   },
   {
     name: "Mozart",
