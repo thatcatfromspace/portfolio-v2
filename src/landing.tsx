@@ -93,7 +93,7 @@ export const Landing = () => {
             </Sheet>
           </div>
         </nav>
-        <div className="flex flex-col px-6 antialiased lg:my-20 lg:px-32">
+        <div className="flex flex-col px-6 antialiased lg:my-10 lg:px-32">
           <div className="mt-16 flex cursor-default">
             {showGradient ? (
               <h1 className="font-heading text-4xl font-semibold leading-snug tracking-wide dark:text-slate-300">
