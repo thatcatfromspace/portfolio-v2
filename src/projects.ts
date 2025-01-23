@@ -27,7 +27,7 @@ export const projects: Array<{
     desc: "Big data weather analytics for weather forecasting.",
     frameworks: [
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/blob/main/src/assets/cassandra.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/cassandra.svg",
     ]
   },
   {
