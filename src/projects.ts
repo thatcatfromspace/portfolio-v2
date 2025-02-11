@@ -22,7 +22,7 @@ export const projects: Array<{
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/fastapi.svg",
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/langchain.svg",
     ],
-    link: "https://ai-planet-chatbot.vercel.app"
+    link: "https://pdf-chat-purple.vercel.app"
   },
   {
     name: "ForeSight",
