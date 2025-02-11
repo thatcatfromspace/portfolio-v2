@@ -52,6 +52,11 @@ export const Landing = () => {
             <p>Dinesh Veluswamy</p>
           </div>
           <div className="flex items-center gap-x-10 font-semibold text-neutral-400">
+            <a href="https://dinesh-veluswamy-blog.vercel.app" target="_blank">
+              <span className="hidden cursor-pointer hover:underline active:text-slate-300 sm:flex">
+                Blog
+              </span>
+            </a>
             <a href={resume} target="_blank">
               <span className="hidden cursor-pointer hover:underline active:text-slate-300 sm:flex">
                 Resume
