@@ -15,14 +15,15 @@ export const projects: Array<{
     link: "https://proleap.vercel.app",
   },
   {
-    name: "ChatPDF",
-    desc: "Summarize and converse about your PDFs with a chatbot.",
+    name: "Remus",
+    desc: "Converse about your text, image and video files with a chatbot.",
     frameworks: [
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/react.svg",
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/fastapi.svg",
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/langchain.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/google.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
+      "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/redis/redis-original.svg",
     ],
-    link: "https://pdf-chat-purple.vercel.app"
+    link: "https://github.com/thatcatfromspace/remus",
   },
   {
     name: "ForeSight",
@@ -31,7 +32,7 @@ export const projects: Array<{
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/cassandra.svg",
     ],
-    link: "https://github.com/thatcatfromspace/foresight"
+    link: "https://github.com/thatcatfromspace/foresight",
   },
   {
     name: "BloomSync",
@@ -49,6 +50,6 @@ export const projects: Array<{
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/nestjs.svg",
       "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg",
     ],
-    link: "https://mozart-tracker.vercel.app"
-  }
+    link: "https://mozart-tracker.vercel.app",
+  },
 ];
