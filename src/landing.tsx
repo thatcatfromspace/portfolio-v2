@@ -106,17 +106,31 @@ export const Landing = () => {
                 <span className="name font-heading font-bold leading-snug tracking-wide">
                   Dinesh&nbsp;
                 </span>
-                and I'm a&nbsp; <TextLoop texts={["Software Engineer.", "Full Stack Developer.", "LLM Enthusiast.", "Team Leader.", "Systems Designer.", "Distrohopper."]} interval={3000} />
+                and I'm a&nbsp;{" "}
+                <TextLoop
+                  texts={[
+                    "Software Engineer.",
+                    "Full Stack Developer.",
+                    "LLM Enthusiast.",
+                    "Team Leader.",
+                    "Systems Designer.",
+                    "Distrohopper.",
+                  ]}
+                  interval={3000}
+                />
               </h1>
             ) : (
-              <TextGenerateEffect words={"Hey, I'm Dinesh and I'm a Web Developer."} />
+              <TextGenerateEffect
+                words={"Hey, I'm Dinesh and I'm a Web Developer."}
+              />
             )}
           </div>
           <div className="mt-4 flex">
             <p className="text-lg dark:text-slate-300 sm:w-3/5">
-              I'm a software developer specializing in building responsive,
-              performant and elegant websites. I'm currently exploring different JavaScript frameworks and advanced C++. I'm also an open
-              source contributor. 
+              I'm a software developer and data engineer specializing in
+              building business websites. I'm currently exploring different
+              JavaScript frameworks and advanced C++. I'm also an open source
+              contributor.
             </p>
           </div>
           <motion.div
