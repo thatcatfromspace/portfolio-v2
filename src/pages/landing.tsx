@@ -64,7 +64,7 @@ export const Landing = () => {
         <SkillsSection />
         <motion.span
           onClick={() => navigate("/projects")}
-          className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-tr from-blue-400 via-pink-400 to-purple-400 px-4 py-2 text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none dark:from-blue-500/50 dark:via-pink-500/50 dark:to-purple-500/50 dark:text-white"
+          className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-tr from-blue-400 via-pink-400 to-purple-400 px-4 py-2 text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none dark:from-blue-500/50 dark:via-pink-500/50 dark:to-purple-500/50 dark:text-white cursor-pointer"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
