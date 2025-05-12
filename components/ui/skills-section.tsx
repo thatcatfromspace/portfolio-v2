@@ -4,11 +4,11 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { MouseEvent, useState } from "react";
 
 const skills = [
-  { name: "React", icon: "../src/assets/react.svg" },
-  { name: "Next.js", icon: "../src/assets/nextjs.svg" },
-  { name: "Python", icon: "../src/assets/python.svg" },
-  { name: "FastAPI", icon: "../src/assets/fastapi.svg" },
-  { name: "PostgreSQL", icon: "../src/assets/postgresql.svg" },
+  { name: "React", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/react.svg" },
+  { name: "Next.js", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/nextjs.svg" },
+  { name: "Python", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg" },
+  { name: "FastAPI", icon: "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/fastapi/fastapi-original.svg" },
+  { name: "PostgreSQL", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg" },
 ];
 
 const TechCard = ({ skill, index }: { skill: typeof skills[0]; index: number }) => {

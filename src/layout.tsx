@@ -28,7 +28,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className="h-[100%] min-h-[100vh] scroll-smooth bg-background font-sans">
       <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200/20 bg-white/60 px-6 py-3 shadow-none backdrop-blur-md dark:border-transparent dark:bg-transparent">
         <div className="flex items-center gap-x-2 font-heading text-lg font-bold">
-          <a href="https://pokemondb.net/pokedex/oddish" aria-label="Home">
+          <a href="https://dineshcodes.xyz" aria-label="Home">
             <img
               src={oddish}
               alt="avatar"

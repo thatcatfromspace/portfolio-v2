@@ -9,6 +9,7 @@ import { TextLoop } from "react-text-loop-ts";
 import { SkillsSection } from "../../components/ui/skills-section";
 import { CustomCursor } from "../../components/ui/custom-cursor";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Landing = () => {
   const [showGradient, setShowGradient] = useState(false);
@@ -18,6 +19,8 @@ export const Landing = () => {
       setShowGradient(true);
     }, 4000);
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative flex min-h-[95vh] w-full flex-col items-center justify-center px-6 antialiased lg:px-32">
@@ -59,8 +62,8 @@ export const Landing = () => {
           take on challenging development projects.
         </p>
         <SkillsSection />
-        <motion.a
-          href="./projects"
+        <motion.span
+          onClick={() => navigate("/projects")}
           className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-tr from-blue-400 via-pink-400 to-purple-400 px-4 py-2 text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none dark:from-blue-500/50 dark:via-pink-500/50 dark:to-purple-500/50 dark:text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,7 +71,7 @@ export const Landing = () => {
         >
           View My Projects
           <ArrowRight height={20} width={20} />
-        </motion.a>
+        </motion.span>
         <div className="mt-6 font-heading">
           <h2 className="text-lg font-bold dark:text-slate-300">
             {"Let's Connect!"}
