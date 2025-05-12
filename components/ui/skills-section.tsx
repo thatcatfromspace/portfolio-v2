@@ -4,14 +4,35 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { MouseEvent, useState } from "react";
 
 const skills = [
-  { name: "React", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/react.svg" },
-  { name: "Next.js", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/nextjs.svg" },
-  { name: "Python", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg" },
-  { name: "FastAPI", icon: "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/fastapi/fastapi-original.svg" },
-  { name: "PostgreSQL", icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg" },
+  {
+    name: "React",
+    icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/react.svg",
+  },
+  {
+    name: "Next.js",
+    icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/refs/heads/main/src/assets/nextjs.svg",
+  },
+  {
+    name: "Python",
+    icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
+  },
+  {
+    name: "FastAPI",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/fastapi/fastapi-original.svg",
+  },
+  {
+    name: "PostgreSQL",
+    icon: "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg",
+  },
 ];
 
-const TechCard = ({ skill, index }: { skill: typeof skills[0]; index: number }) => {
+const TechCard = ({
+  skill,
+  index,
+}: {
+  skill: (typeof skills)[0];
+  index: number;
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -65,7 +86,7 @@ const TechCard = ({ skill, index }: { skill: typeof skills[0]; index: number }) 
         <motion.img
           src={skill.icon}
           alt={skill.name}
-          className="h-8 w-8 grayscale group-hover:grayscale-0"
+          className={`h-8 w-8 grayscale group-hover:grayscale-0`}
           style={{
             transform: "translateZ(20px)",
           }}
@@ -94,7 +115,7 @@ export const SkillsSection = () => {
       <h2 className="mb-5 text-xl font-semibold dark:text-slate-300">
         Tech Stack
       </h2>
-      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 w-3/4">
+      <div className="grid w-3/4 grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         {skills.map((skill, index) => (
           <TechCard key={skill.name} skill={skill} index={index} />
         ))}
@@ -102,4 +123,3 @@ export const SkillsSection = () => {
     </motion.div>
   );
 };
-

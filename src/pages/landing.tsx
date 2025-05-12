@@ -62,16 +62,18 @@ export const Landing = () => {
           take on challenging development projects.
         </p>
         <SkillsSection />
-        <motion.span
-          onClick={() => navigate("/projects")}
-          className="mt-6 inline-flex items-center gap-2 rounded-lg bg-gradient-to-tr from-blue-400 via-pink-400 to-purple-400 px-4 py-2 text-white shadow-lg transition-all hover:scale-105 hover:shadow-xl focus:outline-none dark:from-blue-500/50 dark:via-pink-500/50 dark:to-purple-500/50 dark:text-white cursor-pointer"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          View My Projects
-          <ArrowRight height={20} width={20} />
-        </motion.span>
+        <div className="group hover:scale-105 mt-6 transition-transform duration-500">
+          <motion.span
+            onClick={() => navigate("/projects")}
+            className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-gradient-to-tr from-blue-400 via-pink-400 to-purple-400 px-4 py-2 text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl focus:outline-none dark:from-blue-500/50 dark:via-pink-500/50 dark:to-purple-500/50 dark:text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            View My Projects
+            <ArrowRight className="group-hover:translate-x-1 group-hover:scale-y-110 transition-transform duration-300" height={20} width={20} />
+          </motion.span>
+        </div>
         <div className="mt-6 font-heading">
           <h2 className="text-lg font-bold dark:text-slate-300">
             {"Let's Connect!"}
