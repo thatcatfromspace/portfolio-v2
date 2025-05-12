@@ -20,7 +20,7 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: "Plus Jakarta Sans",
-        sans: "Inter",
+        sans: "Outfit",
       },
       keyframes: {
         "accordion-down": {
