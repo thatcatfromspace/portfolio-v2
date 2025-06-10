@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
 import { TextLoop } from "react-text-loop-ts";
-import { SkillsSection } from "../../components/ui/skills-section";
 import { workExperience } from "../work-experience";
 import { CustomCursor } from "../../components/ui/custom-cursor";
 import { ArrowRight } from "lucide-react";
