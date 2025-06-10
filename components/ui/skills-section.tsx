@@ -115,7 +115,7 @@ export const SkillsSection = () => {
       <h2 className="mb-5 text-xl font-semibold dark:text-slate-300">
         Tech Stack
       </h2>
-      <div className="grid w-3/4 grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      <div className="grid w-3/4 grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
         {skills.map((skill, index) => (
           <TechCard key={skill.name} skill={skill} index={index} />
         ))}

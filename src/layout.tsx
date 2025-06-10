@@ -3,7 +3,7 @@ import moon from "./assets/moon.png";
 import oddish from "./assets/oddish.png";
 import mail from "./assets/mail.png";
 import pencil from "./assets/pencil.png";
-import folder from "./assets/folder.png"
+import folder from "./assets/folder.png";
 import resume from "./assets/dinesh-tv-resume.pdf";
 import {
   Sheet,
@@ -46,7 +46,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             aria-label="Blog"
             className="group relative flex flex-col items-center"
           >
-            <span className="text-lg text-neutral-500 dark:text-slate-300 grayscale hover:grayscale-0">
+            <span className="text-lg text-neutral-500 grayscale hover:grayscale-0 dark:text-slate-300">
               <img src={pencil} alt="mail" height={20} width={20} />
             </span>
             {/* <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-blue-400 transition-all group-hover:w-full"></span> */}
@@ -58,7 +58,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             aria-label="Resume"
             className="group relative flex flex-col items-center"
           >
-            <span className="text-lg text-neutral-500 dark:text-slate-300 grayscale hover:grayscale-0">
+            <span className="text-lg text-neutral-500 grayscale hover:grayscale-0 dark:text-slate-300">
               <img src={folder} alt="folder" height={20} width={20} />
             </span>
             {/* <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-green-400 transition-all group-hover:w-full"></span> */}
@@ -68,7 +68,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             aria-label="Contact"
             className="group relative flex flex-col items-center"
           >
-            <span className="text-lg text-neutral-500 dark:text-slate-300 grayscale hover:grayscale-0">
+            <span className="text-lg text-neutral-500 grayscale hover:grayscale-0 dark:text-slate-300">
               <img src={mail} alt="pencil" height={30} width={30} />
             </span>
             {/* <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-pink-400 transition-all group-hover:w-full"></span> */}
@@ -78,7 +78,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             aria-label="Toggle dark mode"
             className="group relative flex flex-col items-center"
           >
-            <span className="text-lg text-neutral-500 dark:text-slate-300 grayscale hover:grayscale-0">
+            <span className="text-lg text-neutral-500 grayscale hover:grayscale-0 dark:text-slate-300">
               <img src={moon} alt="moon" height={20} width={20} />
             </span>
             {/* <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-yellow-400 transition-all group-hover:w-full"></span> */}
