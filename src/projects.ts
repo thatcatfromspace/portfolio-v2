@@ -5,6 +5,14 @@ export const projects: Array<{
   link?: string;
 }> = [
   {
+    name: "Keystore",
+    desc: "Blazing fast, in-memory key-value database.",
+    frameworks: [
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/cpp.svg",
+    ],
+    link: "https://github.com/thatcatfromspace/keystore",
+  },
+  {
     name: "ProLeap",
     desc: "Comprehensive app to manage mentor sessions.",
     frameworks: [
@@ -43,13 +51,11 @@ export const projects: Array<{
     link: "https://github.com/thatcatfromspace/bloomsync",
   },
   {
-    name: "Mozart",
-    desc: "Track your music listening history with ease!",
+    name: "ECGcomp",
+    desc: "Real-time ECG compression system for biosignals.",
     frameworks: [
-      "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/nestjs.svg",
-      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/postgresql.svg",
+      "https://raw.githubusercontent.com/thatcatfromspace/portfolio-v2/main/src/assets/python.svg",
     ],
-    link: "https://mozart-tracker.vercel.app",
+    link: "https://github.com/thatcatfromspace/ecg_compression",
   },
 ];
