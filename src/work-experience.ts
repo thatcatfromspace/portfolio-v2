@@ -7,11 +7,11 @@ type workExperienceType = Array<{
 
 export const workExperience: workExperienceType = [
   {
-    role: "Data & AI Consultant - Intern",
+    role: "Data & AI Consultant, Intern",
     company: "Thorogood Associates",
     period: "May 2025 - Present",
     description:
-      "Contributing to building client oriented, business intelligence solutions.",
+      "Worked in migrating applications from AWS Elastic Beanstalk to ECS, implemented GitHub Actions for CI/CD and worked on modernizing internal tools using React.",
   },
   {
     role: "Full Stack Engineer",
