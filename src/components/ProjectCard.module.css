@@ -19,6 +19,7 @@
 
 .card.expanded {
   border-color: var(--color-ink);
+  grid-column: 1 / -1;
 }
 
 .card.featured {
