@@ -1,0 +1,76 @@
+.section {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-12);
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.signature {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  /* margin-bottom: var(--space-4); */
+}
+
+.headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 8vw, 5rem); /* Larger, responsive */
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--color-ink);
+  margin-bottom: var(--space-6);
+  max-width: 12ch; 
+}
+
+.role {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  color: var(--color-muted);
+  margin-bottom: var(--space-6);
+
+}
+
+.statement {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-muted);
+  max-width: 42ch;
+  margin-left: 4ch; /* Offset - breaks symmetry */
+}
+
+.accentLine {
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-accent);
+  margin-top: var(--space-8);
+  margin-left: 4ch; /* Aligns with statement offset */
+  transform-origin: left;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: var(--space-16);
+    min-height: 75vh;
+  }
+  
+  .headline {
+    max-width: 10ch;
+  }
+  
+  .statement {
+    margin-left: 0;
+    font-size: var(--text-sm);
+  }
+  
+  .accentLine {
+    margin-left: 0;
+  }
+}

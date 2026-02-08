@@ -1,0 +1,147 @@
+.section {
+  padding: var(--space-6) 0;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: var(--space-2);
+  min-height: 48px;
+}
+
+.marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.breakDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--color-muted);
+}
+
+.line {
+  width: 1px;
+  flex-grow: 1;
+  margin-top: 4px;
+  background-color: var(--color-border);
+}
+
+.content {
+  padding-bottom: var(--space-3);
+}
+
+.date {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+.text {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+/* Current entry */
+.entry.current .dot {
+  background-color: var(--color-accent);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.entry.current .date {
+  color: var(--color-accent);
+}
+
+.entry.current .text {
+  color: var(--color-ink);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(255, 59, 0, 0.4);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 4px rgba(255, 59, 0, 0);
+  }
+}
+
+/* Past entries */
+.entry.past .dot {
+  background-color: var(--color-border);
+}
+
+.entry.past .date {
+  color: var(--color-muted);
+}
+
+.entry.past .text {
+  color: var(--color-muted);
+}
+
+/* Break entries - academic gaps */
+.entry.break {
+  min-height: 36px;
+}
+
+.entry.break .breakDot {
+  background-color: var(--color-border);
+}
+
+.entry.break .content {
+  padding-bottom: var(--space-2);
+}
+
+.entry.break .date {
+  font-weight: 500;
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+.entry.break .text {
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+}
+
+.entry.break .line {
+  border-left: 2px dashed var(--color-border);
+  background: none;
+  width: 0;
+}
+
+.entry:last-child .line {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .entry {
+    grid-template-columns: 16px 1fr;
+  }
+  
+  .dot {
+    width: 6px;
+    height: 6px;
+  }
+}
