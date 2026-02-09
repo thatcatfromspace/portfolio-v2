@@ -25,7 +25,7 @@
   letter-spacing: -0.04em;
   color: var(--color-ink);
   margin-bottom: var(--space-6);
-  max-width: 12ch; 
+  max-width: 12ch;
 }
 
 .role {
@@ -34,7 +34,6 @@
   line-height: var(--leading-relaxed);
   color: var(--color-muted);
   margin-bottom: var(--space-6);
-
 }
 
 .statement {
@@ -42,16 +41,14 @@
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   color: var(--color-muted);
-  max-width: 42ch;
-  margin-left: 4ch; /* Offset - breaks symmetry */
+  max-width: 48ch;
 }
 
 .accentLine {
   width: 48px;
   height: 3px;
   background-color: var(--color-accent);
-  margin-top: var(--space-8);
-  margin-left: 4ch; /* Aligns with statement offset */
+  margin-top: var(--space-6);
   transform-origin: left;
 }
 
@@ -60,16 +57,16 @@
     padding-top: var(--space-16);
     min-height: 75vh;
   }
-  
+
   .headline {
     max-width: 10ch;
   }
-  
+
   .statement {
     margin-left: 0;
     font-size: var(--text-sm);
   }
-  
+
   .accentLine {
     margin-left: 0;
   }

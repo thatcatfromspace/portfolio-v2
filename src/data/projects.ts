@@ -18,7 +18,7 @@ export const projects: Project[] = [
     name: "Keystore",
     tagline: "In-memory key-value database",
     year: "2025",
-    description: "A Redis-inspired storage engine written from scratch. Custom wire protocol, persistence layer, and TTL-based expiration.",
+    description: "A Redis-inspired storage engine written from scratch. Custom wire protocol, LRU caching, and TTL-based expiration.",
     challenge: "The interesting part was implementing lock-free reads while maintaining consistency. Uses compare-and-swap & sharded hash tables for writes.",
     tech: ["C++", "TCP/IP"],
     links: {
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     year: "2024",
     description: "End-to-end event organization platform for students, professionals and organizations.",
     challenge: "Building a general purpose event organization platform is harder than it looks. ",
-    tech: ["React", "Django", "PostgreSQL"],
+    tech: ["React", "NestJS", "PostgreSQL"],
     links: {
       demo: "https://proleap.vercel.app",
     },
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     name: "ForeSight",
     tagline: "Weather forecasting at scale",
     year: "2025",
-    description: "Distributed analytics on historical weather data. Time-series storage with Cassandra, custom ML models for prediction.",
+    description: "Distributed analytics on historical weather data. Time-series storage with Cassandra, custom XGBoost model for prediction.",
     challenge: "Cassandra partition sizing for time-series queries. Ended up with a bucketed approach that balances write and read patterns.",
     tech: ["Python", "Cassandra", "Spark"],
     links: {

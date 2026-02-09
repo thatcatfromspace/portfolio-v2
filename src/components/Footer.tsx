@@ -46,7 +46,7 @@ export const Footer = () => {
         </a>
       </div>
       
-      <p className={styles.signoff}>Built with pride.</p>
+      <p className={styles.signoff}>Built with intention.</p>
     </motion.footer>
   );
 };
