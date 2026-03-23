@@ -24,22 +24,25 @@
   color: var(--color-accent);
 }
 
-/* Closing statement - given weight */
-.signoff {
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 600;
-  color: var(--color-ink);
-  letter-spacing: -0.01em;
+/* Contact text at bottom */
+.contactText {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  font-weight: 400;
 }
 
-.signoff::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--color-accent);
-  margin-bottom: var(--space-3);
+.contactText a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 4px;
+  transition: all 0.2s ease;
+}
+
+.contactText a:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
 }
 
 @media (max-width: 640px) {
@@ -48,7 +51,7 @@
     gap: var(--space-3);
   }
   
-  .signoff {
-    font-size: var(--text-base);
+  .contactText {
+    font-size: var(--text-sm);
   }
 }

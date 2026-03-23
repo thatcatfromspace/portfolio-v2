@@ -50,6 +50,18 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "awsmtex",
+    name: "awsmTeX",
+    tagline: "In-browser LaTeX renderer",
+    year: "2026",
+    description: "A high-performance in-browser LaTeX renderer that uses WebAssembly to compile and render LaTeX documents in real-time.",
+    challenge: "Supporting multiple LaTeX compilers and dynamic package imports was the hardest part.",
+    tech: ["Rust", "WebAssembly", "LaTeX"],
+    links: {
+      source: "https://github.com/thatcatfromspace/tex",
+    },
+  },
+  {
     id: "foresight",
     name: "ForeSight",
     tagline: "Weather forecasting at scale",

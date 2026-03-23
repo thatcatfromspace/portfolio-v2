@@ -46,7 +46,9 @@ export const Footer = () => {
         </a>
       </div>
       
-      <p className={styles.signoff}>Built with intention.</p>
+      <p className={styles.contactText}>
+        Still here? Drop me a line at <a href={`mailto:${content.contactEmail}`}>{content.contactEmail}</a>
+      </p>
     </motion.footer>
   );
 };

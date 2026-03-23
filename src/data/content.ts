@@ -2,9 +2,9 @@ export const content = {
   name: "Dinesh Veluswamy",
   role: "Full Stack Developer & DevOps Engineer",
   
-  headline: "I build systems meant to last.",
+  headline: "I engineer reliable solutions that last.",
   
-  statement: "I write software that values clarity over cleverness. I care about predictable behavior, boring deploys, and systems that hold under pressure.",
+  statement: "I bring hands-on experience in both building end-to-end applications and managing the infrastructure that powers them. I focus on delivering practical, maintainable solutions.",
 
   contactEmail: "dineshveluswamy@gmail.com",
   
@@ -39,7 +39,7 @@ export const timeline: TimelineEntry[] = [
   },
   {
     date: "May 2025",
-    text: "Joined Thorogood Associates. First week spent untangling legacy deployments.",
+    text: "Joined Thorogood Associates.",
     type: "work",
   },
   {
