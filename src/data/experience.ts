@@ -12,7 +12,7 @@ export const experience: Experience[] = [
   {
     role: "Software Engineer",
     company: "Unbound Security",
-    period: "Starting Apr 2026",
+    period: "Apr 2026 - Present",
     current: true,
     url: "https://getunbound.ai/",
   },

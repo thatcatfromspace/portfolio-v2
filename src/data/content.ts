@@ -1,10 +1,10 @@
 export const content = {
   name: "Dinesh Veluswamy",
-  role: "Full Stack Developer & DevOps Engineer",
+  role: "Software & Devops Engineer ",
   
   headline: "I engineer reliable solutions that last.",
   
-  statement: "I bring hands-on experience in both building end-to-end applications and managing the infrastructure that powers them. I focus on delivering practical, maintainable solutions.",
+  statement: "I enjoy solving practical problems, building cool stuff and learning by doing.",
 
   contactEmail: "dineshveluswamy@gmail.com",
   
@@ -27,14 +27,19 @@ export interface TimelineEntry {
 
 export const timeline: TimelineEntry[] = [
   {
-    date: "Present",
-    text: "Academic semester. Pre-final year.",
+    date: "May 2026 - Present",
+    text: "Joined Unbound Security as a software engineering intern.",
     current: true,
+    type: "work",
+  },
+  {
+    date: "Dec 2025 - Apr 2026",
+    text: "Academic semester. Pre-final year.",
     type: "break",
   },
   {
     date: "Jul 2025",
-    text: "Migrated Elastic Beanstalk to ECS. Made CI/CD pipelines less painful. Worked on driving DevOps for a new internal application.",
+    text: "Migrated Elastic Beanstalk to ECS. Made CI/CD pipelines fully automated from requiring manual intervention.",
     type: "work",
   },
   {
