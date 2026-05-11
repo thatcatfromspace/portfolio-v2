@@ -16,78 +16,78 @@ const op = (on: boolean, dur: string, delay: string) =>
 
 
 
-interface SpinningCubeProps {
-  cx: number;
-  cy: number;
-  halfSize: number;
-  visible: boolean;
-  ink: string;
-}
+// interface SpinningCubeProps {
+//   cx: number;
+//   cy: number;
+//   halfSize: number;
+//   visible: boolean;
+//   ink: string;
+// }
 
-const SpinningCube = ({ cx, cy, halfSize, visible, ink }: SpinningCubeProps) => {
-  const lineRefs = useRef<(SVGLineElement | null)[]>([]);
-  const rafRef   = useRef<number>(0);
-  const angleRef = useRef(0);
+// const SpinningCube = ({ cx, cy, halfSize, visible, ink }: SpinningCubeProps) => {
+  // const lineRefs = useRef<(SVGLineElement | null)[]>([]);
+  // const rafRef   = useRef<number>(0);
+  // const angleRef = useRef(0);
 
-  const gridLines: [number, number, number, number, number, number][] = [];
-  [-1, -1/3, 1/3, 1].forEach(v => {
-    [-1, 1].forEach(a => {
-      gridLines.push([v, a, -1, v, a, 1]);
-      gridLines.push([a, v, -1, a, v, 1]);
-      gridLines.push([-1, v, a, 1, v, a]);
-    });
-  });
+  // const gridLines: [number, number, number, number, number, number][] = [];
+  // [-1, -1/3, 1/3, 1].forEach(v => {
+  //   [-1, 1].forEach(a => {
+  //     gridLines.push([v, a, -1, v, a, 1]);
+  //     gridLines.push([a, v, -1, a, v, 1]);
+  //     gridLines.push([-1, v, a, 1, v, a]);
+  //   });
+  // });
 
-  useEffect(() => {
-    if (!visible) return;
-    const FOV = 3.8, SPEED = 0.006, s = halfSize;
-    const INV_S2 = 1 / Math.SQRT2;
-    const ux = INV_S2, uy = INV_S2, uz = 0;
+  // useEffect(() => {
+  //   if (!visible) return;
+  //   const FOV = 3.8, SPEED = 0.006, s = halfSize;
+  //   const INV_S2 = 1 / Math.SQRT2;
+  //   const ux = INV_S2, uy = INV_S2, uz = 0;
 
-    const animate = () => {
-      angleRef.current += SPEED;
-      const a = angleRef.current, cosT = Math.cos(a), sinT = Math.sin(a), omc = 1 - cosT;
-      const project = (vx: number, vy: number, vz: number) => {
-        const dot = ux * vx + uy * vy + uz * vz;
-        const crx = uy * vz - uz * vy, cry = uz * vx - ux * vz, crz = ux * vy - uy * vx;
-        const rx = vx * cosT + crx * sinT + ux * dot * omc;
-        const ry = vy * cosT + cry * sinT + uy * dot * omc;
-        const rz = vz * cosT + crz * sinT + uz * dot * omc;
-        const scale = FOV / (FOV + rz);
-        return { x: cx + rx * scale * s, y: cy + ry * scale * s };
-      };
+  //   const animate = () => {
+  //     angleRef.current += SPEED;
+  //     const a = angleRef.current, cosT = Math.cos(a), sinT = Math.sin(a), omc = 1 - cosT;
+  //     const project = (vx: number, vy: number, vz: number) => {
+  //       const dot = ux * vx + uy * vy + uz * vz;
+  //       const crx = uy * vz - uz * vy, cry = uz * vx - ux * vz, crz = ux * vy - uy * vx;
+  //       const rx = vx * cosT + crx * sinT + ux * dot * omc;
+  //       const ry = vy * cosT + cry * sinT + uy * dot * omc;
+  //       const rz = vz * cosT + crz * sinT + uz * dot * omc;
+  //       const scale = FOV / (FOV + rz);
+  //       return { x: cx + rx * scale * s, y: cy + ry * scale * s };
+  //     };
 
-      gridLines.forEach((line, i) => {
-        const el = lineRefs.current[i];
-        if (!el) return;
-        const p1 = project(line[0], line[1], line[2]);
-        const p2 = project(line[3], line[4], line[5]);
-        el.setAttribute("x1", String(p1.x));
-        el.setAttribute("y1", String(p1.y));
-        el.setAttribute("x2", String(p2.x));
-        el.setAttribute("y2", String(p2.y));
-      });
-      rafRef.current = requestAnimationFrame(animate);
-    };
-    rafRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [visible, cx, cy, halfSize]);
+  //     gridLines.forEach((line, i) => {
+  //       const el = lineRefs.current[i];
+  //       if (!el) return;
+  //       const p1 = project(line[0], line[1], line[2]);
+  //       const p2 = project(line[3], line[4], line[5]);
+  //       el.setAttribute("x1", String(p1.x));
+  //       el.setAttribute("y1", String(p1.y));
+  //       el.setAttribute("x2", String(p2.x));
+  //       el.setAttribute("y2", String(p2.y));
+  //     });
+  //     rafRef.current = requestAnimationFrame(animate);
+  //   };
+  //   rafRef.current = requestAnimationFrame(animate);
+  //   return () => cancelAnimationFrame(rafRef.current);
+  // }, [visible, cx, cy, halfSize]);
 
-  return (
-    <g opacity={visible ? 1 : 0} style={{ transition: "opacity 0.6s ease 0.3s" }}>
-      {gridLines.map((_, i) => (
-        <line
-          key={i}
-          ref={(el) => { lineRefs.current[i] = el; }}
-          stroke={ink}
-          strokeWidth="0.6"
-          strokeLinecap="round"
-          opacity="0.2"
-        />
-      ))}
-    </g>
-  );
-};
+  // return (
+  //   <g opacity={visible ? 1 : 0} style={{ transition: "opacity 0.6s ease 0.3s" }}>
+  //     {gridLines.map((_, i) => (
+  //       <line
+  //         key={i}
+  //         ref={(el) => { lineRefs.current[i] = el; }}
+  //         stroke={ink}
+  //         strokeWidth="0.6"
+  //         strokeLinecap="round"
+  //         opacity="0.2"
+  //       />
+  //     ))}
+  //   </g>
+  // );
+// };
 
 const LINES = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 const getWinner = (b: (string|null)[]): string|null => {
