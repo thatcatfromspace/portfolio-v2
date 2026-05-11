@@ -4,7 +4,7 @@ import styles from "./OpeningStatement.module.css";
 
 export const OpeningStatement = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} data-sketch="hero">
       <motion.p 
         className={styles.signature}
         initial={{ opacity: 0 }}

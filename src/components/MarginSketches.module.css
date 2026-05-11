@@ -1,0 +1,215 @@
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+/* Hide entirely when viewport too narrow for margins */
+@media (max-width: 1080px) {
+  .canvas {
+    display: none;
+  }
+}
+
+/* ── Base path styles ─────────────────────────────────── */
+.sketchPath {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ── Draw-on keyframe ─────────────────────────────────── */
+@keyframes drawOn {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drawCircle {
+  from { stroke-dashoffset: 100; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* ── Group visibility: hidden until triggered ─────────── */
+.sketchGroup {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sketchGroup.visible {
+  opacity: 1;
+}
+
+/* ── Hero group ───────────────────────────────────────── */
+/* Left: wavy ruler line */
+.heroWave {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+}
+.heroWaveTick {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+}
+
+/* Right: curly braces */
+.heroBrace {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+}
+
+.sketchGroup.visible .heroWave {
+  animation: drawOn 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+}
+.sketchGroup.visible .heroWaveTick1 {
+  animation: drawOn 0.4s ease 0.9s forwards;
+}
+.sketchGroup.visible .heroWaveTick2 {
+  animation: drawOn 0.4s ease 1.1s forwards;
+}
+.sketchGroup.visible .heroWaveTick3 {
+  animation: drawOn 0.4s ease 1.3s forwards;
+}
+.sketchGroup.visible .heroWaveTick4 {
+  animation: drawOn 0.4s ease 1.5s forwards;
+}
+.sketchGroup.visible .heroBraceOpen {
+  animation: drawOn 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+}
+.sketchGroup.visible .heroBraceClose {
+  animation: drawOn 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s forwards;
+}
+.sketchGroup.visible .heroBraceLabel {
+  animation: drawOn 0.8s ease 1.7s forwards;
+}
+
+/* ── Now / Timeline group ─────────────────────────────── */
+.nowArrow {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+}
+.nowArrowHead {
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+}
+.nowLabel {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+}
+.nowTick {
+  stroke-dasharray: 14;
+  stroke-dashoffset: 14;
+}
+
+.sketchGroup.visible .nowArrow {
+  animation: drawOn 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s forwards;
+}
+.sketchGroup.visible .nowArrowHead {
+  animation: drawOn 0.5s ease 1.2s forwards;
+}
+.sketchGroup.visible .nowLabel {
+  animation: drawOn 1s ease 1.5s forwards;
+}
+.sketchGroup.visible .nowTick1 {
+  animation: drawOn 0.35s ease 0.5s forwards;
+}
+.sketchGroup.visible .nowTick2 {
+  animation: drawOn 0.35s ease 0.8s forwards;
+}
+.sketchGroup.visible .nowTick3 {
+  animation: drawOn 0.35s ease 1.1s forwards;
+}
+
+/* ── Projects group ───────────────────────────────────── */
+.projBracket {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+.projDot {
+  /* dots fade in via opacity, drawn via r animation substitute */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.projLabel {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+}
+
+.sketchGroup.visible .projBracketTL {
+  animation: drawOn 0.7s ease 0.1s forwards;
+}
+.sketchGroup.visible .projBracketBL {
+  animation: drawOn 0.7s ease 0.3s forwards;
+}
+.sketchGroup.visible .projBracketTR {
+  animation: drawOn 0.7s ease 0.5s forwards;
+}
+.sketchGroup.visible .projBracketBR {
+  animation: drawOn 0.7s ease 0.7s forwards;
+}
+
+/* Dot grid stagger */
+.sketchGroup.visible .projDot {
+  animation: fadeIn 0.4s ease forwards;
+}
+.sketchGroup.visible .projDot:nth-child(1)  { animation-delay: 0.3s; }
+.sketchGroup.visible .projDot:nth-child(2)  { animation-delay: 0.45s; }
+.sketchGroup.visible .projDot:nth-child(3)  { animation-delay: 0.6s; }
+.sketchGroup.visible .projDot:nth-child(4)  { animation-delay: 0.75s; }
+.sketchGroup.visible .projDot:nth-child(5)  { animation-delay: 0.9s; }
+.sketchGroup.visible .projDot:nth-child(6)  { animation-delay: 1.05s; }
+.sketchGroup.visible .projDot:nth-child(7)  { animation-delay: 1.2s; }
+.sketchGroup.visible .projDot:nth-child(8)  { animation-delay: 1.35s; }
+.sketchGroup.visible .projDot:nth-child(9)  { animation-delay: 1.5s; }
+.sketchGroup.visible .projLabel1 {
+  animation: drawOn 0.8s ease 0.6s forwards;
+}
+.sketchGroup.visible .projLabel2 {
+  animation: drawOn 0.8s ease 1.0s forwards;
+}
+.sketchGroup.visible .projLabel3 {
+  animation: drawOn 0.8s ease 1.4s forwards;
+}
+
+/* ── Experience group ─────────────────────────────────── */
+.expHatch {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 80;
+}
+.expCorner {
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+}
+.expComment {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.sketchGroup.visible .expHatch1 {
+  animation: drawOn 0.6s ease 0.0s forwards;
+}
+.sketchGroup.visible .expHatch2 {
+  animation: drawOn 0.6s ease 0.18s forwards;
+}
+.sketchGroup.visible .expHatch3 {
+  animation: drawOn 0.6s ease 0.36s forwards;
+}
+.sketchGroup.visible .expHatch4 {
+  animation: drawOn 0.6s ease 0.54s forwards;
+}
+.sketchGroup.visible .expCorner {
+  animation: drawOn 1s ease 0.2s forwards;
+}
+.sketchGroup.visible .expComment {
+  animation: drawOn 1.6s ease 0.8s forwards;
+}

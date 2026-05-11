@@ -5,7 +5,7 @@ import styles from "./ProjectsSection.module.css";
 
 export const ProjectsSection = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} data-sketch="projects">
       <motion.h2 
         className={styles.heading}
         initial={{ opacity: 0 }}

@@ -7,6 +7,7 @@ import { ProjectsSection } from "./components/ProjectsSection";
 import { ExperienceTable } from "./components/ExperienceTable";
 import { Footer } from "./components/Footer";
 import { NotFound } from "./components/NotFound";
+import { MarginSketches } from "./components/MarginSketches";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -20,6 +21,7 @@ function App() {
   if (currentPath !== "/" && currentPath !== "/index.html") {
     return (
       <>
+        <MarginSketches />
         <Header />
         <main className="container">
           <NotFound />
@@ -31,6 +33,7 @@ function App() {
 
   return (
     <>
+      <MarginSketches />
       <Header />
       <main className="container">
         <OpeningStatement />

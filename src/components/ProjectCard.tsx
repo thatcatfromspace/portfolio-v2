@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Project } from "../data/projects";
 import styles from "./ProjectCard.module.css";
@@ -11,6 +11,17 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project, index, featured = false }: ProjectCardProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    if (!isExpanded) return;
+
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsExpanded(false);
+    };
+
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [isExpanded]);
 
   return (
     <motion.article

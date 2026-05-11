@@ -6,6 +6,7 @@ export const NowSection = () => {
   return (
     <motion.section
       className={styles.section}
+      data-sketch="now"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-50px" }}
